@@ -25,3 +25,7 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano_v2
     shield: lily58_right
+  # Diagnostic: wipes the NVS settings partition (BLE pairings + stored keymap).
+  # Flash to BOTH halves, then reflash the normal firmware to both.
+  - board: nice_nano_v2
+    shield: settings_reset
