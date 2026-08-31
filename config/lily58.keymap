@@ -140,6 +140,46 @@
             layers = <QWERTY>;
         };
 
+        /* --- bracket combos (adjacent keys, top letter row) ---
+           These duplicate the &br hold-taps on the same keys, but fire instantly.
+           Shift is passed through by &kp, so shifted [ ] give { } for free. */
+
+        /* UI -> [  (shift gives {) */
+        combo_lbkt {
+            timeout-ms = <45>;
+            require-prior-idle-ms = <125>;
+            key-positions = <19 20>;
+            bindings = <&kp LBKT>;
+            layers = <QWERTY>;
+        };
+
+        /* OP -> ]  (shift gives }) */
+        combo_rbkt {
+            timeout-ms = <45>;
+            require-prior-idle-ms = <125>;
+            key-positions = <21 22>;
+            bindings = <&kp RBKT>;
+            layers = <QWERTY>;
+        };
+
+        /* RT -> ( */
+        combo_lpar {
+            timeout-ms = <45>;
+            require-prior-idle-ms = <125>;
+            key-positions = <15 16>;
+            bindings = <&kp LPAR>;
+            layers = <QWERTY>;
+        };
+
+        /* YU -> ) */
+        combo_rpar {
+            timeout-ms = <45>;
+            require-prior-idle-ms = <125>;
+            key-positions = <18 19>;
+            bindings = <&kp RPAR>;
+            layers = <QWERTY>;
+        };
+
         /* ,. -> delete previous word */
         combo_del_word {
             timeout-ms = <45>;
@@ -176,7 +216,7 @@
 &kp TAB    &kp Q        &kp W        &br LBRC E    &br LBKT R    &br LPAR T                                &br RPAR Y    &br RBKT U    &br RBRC I    &kp O         &kp P             &kp BSLH
 &kp LCTRL  &hml LGUI A  &hml LALT S  &kp D         &kp F         &kp G                                     &br GRAVE H   &kp J         &hmr RGUI K   &hmr RALT L   &hmr RCTRL SEMI   &kp SQT
 &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B       &mt HYPER ESC   &mt MEH BSPC   &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH          &kp RSHFT
-                                     &kp LALT      &mo LOWER     &lt_tuned RAISE ESC  &kp RET      &kp SPACE     &lt_tuned LOWER TAB   &mo RAISE     &kp BSPC
+                                     &kp LALT      &mo LOWER     &lt_tuned RAISE ESC  &kp RET      &kp RET       &lt_tuned LOWER SPACE &mo RAISE     &kp BSPC
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
