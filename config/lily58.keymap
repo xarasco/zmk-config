@@ -216,7 +216,7 @@
 &kp TAB    &kp Q        &kp W        &br LBRC E    &br LBKT R    &br LPAR T                                &br RPAR Y    &br RBKT U    &br RBRC I    &kp O         &kp P             &kp BSLH
 &kp LCTRL  &hml LGUI A  &hml LALT S  &kp D         &kp F         &kp G                                     &br GRAVE H   &kp J         &hmr RGUI K   &hmr RALT L   &hmr RCTRL SEMI   &kp SQT
 &kp LSHFT  &kp Z        &kp X        &kp C         &kp V         &kp B       &mt HYPER ESC   &mt MEH BSPC   &kp N         &kp M         &kp COMMA     &kp DOT       &kp FSLH          &kp RSHFT
-                                     &kp LALT      &mo LOWER     &lt_tuned RAISE ESC  &kp RET      &kp RET       &lt_tuned LOWER SPACE &mo RAISE     &kp BSPC
+                                     &kp LALT      &mo LOWER     &lt_tuned RAISE ESC  &kp LGUI     &kp SPACE     &lt_tuned LOWER RET   &mo RAISE     &kp BSPC
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
